@@ -151,7 +151,7 @@ func (l *Lexer) readNum() (token, error) {
 		if err != nil {
 			return token{}, err
 		}
-		if !unicode.IsDigit(r) || r != '.' {
+		if !unicode.IsDigit(r) && r != '.' {
 			break
 		}
 	}
